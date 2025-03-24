@@ -6,3 +6,25 @@
     font-size: 16px;
     font-weight: 400;
 }
+
+.feature-section {
+    display:none;
+}
+.feature-section.shown {
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 640px){
+        flex-direction: row;
+    }
+}
+
+.faq-answer {
+    display:none;
+}
+.faq-answer.shown {
+    display: block;
+}
+.faq-question img.shown {
+    transform: rotate(180deg);
+    filter: hue-rotate(135deg);
+}
