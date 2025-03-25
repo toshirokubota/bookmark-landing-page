@@ -7,6 +7,62 @@
     font-weight: 400;
 }
 
+#hamburger-icon, #close-icon {
+    display: none;
+}
+#hamburger-icon.shown, #close-icon.shown {
+    display: block;
+    z-index: 2;
+    @media (min-width: 640px){
+        display: none;
+    }
+}
+nav .menu-area {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    margin: 0 -8px;
+    padding: 5rem 1rem;
+    display: none;
+    @media (min-width: 640px){
+        display: inline-block;
+        position: relative;
+        padding: inherit;
+    }
+}
+.social-logos > a:hover img, .social-logos > a:focus img {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(97%) saturate(7096%) hue-rotate(1deg) brightness(94%) contrast(89%);
+}
+nav .social-logos, nav hr {
+    @media (min-width: 640px){
+        display: none;
+    }
+}
+nav.shown .menu-area {
+    display: block;
+    z-index: 2;
+    background-color: rgba(36, 46, 70, 0.9);
+    @media (min-width: 640px){
+        background-color: transparent;
+    }
+}
+nav.shown .menu {
+    flex-direction: column;
+    align-items: center;
+    /* padding: 5rem 1rem 2rem 1rem; */
+    @media (min-width: 640px){
+        flex-direction: row;
+        align-items: center;
+        justify-content: end;
+        /* padding: inherit; */
+    }
+}
+nav.shown .company-logo {
+    filter: invert(100%) grayscale(100%) contrast(2000%);
+}
+
 .feature-section {
     display:none;
 }
@@ -17,6 +73,12 @@
         flex-direction: row;
     }
 }
+#feature-list li {
+    border-color: transparent;
+}
+#feature-list li.shown {
+    border-color: rgb(230, 0, 7); /* tailwind's red-600 */
+}
 
 .faq-answer {
     display:none;
@@ -26,5 +88,18 @@
 }
 .faq-question img.shown {
     transform: rotate(180deg);
-    filter: hue-rotate(135deg);
+    filter: brightness(0) saturate(100%) invert(11%) sepia(97%) saturate(7096%) hue-rotate(1deg) brightness(94%) contrast(89%);
+}
+.error-logo {
+    display: none;
+    position: relative;
+    left: -1.5rem;
+    width: 20px;
+    height: 20px;
+}
+.error-logo.shown {
+    display: inline;
+}
+.error-msg.shown {
+    display: block;
 }
