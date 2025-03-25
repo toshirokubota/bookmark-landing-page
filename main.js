@@ -7,39 +7,7 @@ menu_button.addEventListener('click', () => {
     nav.classList.toggle('shown');
     hamburger.classList.toggle('shown');
     close_icon.classList.toggle('shown');    
-    //console.log(hamburger.classList, close_icon.classList);
 });
-// menu_button.addEventListener('keyup', (e) => {
-//     console.log(e.code);
-//     if(e.code == 'Enter') {
-//         nav.classList.toggle('shown');
-//         hamburger.classList.toggle('shown');
-//         close_icon.classList.toggle('shown');   
-//         e.stopPropagation(); 
-//         // if (nav.classList.contains("shown")) {
-//         //   nav.classList.remove("shown");
-//         //   hamburger.classList.add("shown");
-//         //   close_icon.classList.remove("shown");
-//         // } else {
-//         //   nav.classList.add("shown");
-//         //   hamburger.classList.remove("shown");
-//         //   close_icon.classList.add("shown");
-//         // }
-//         console.log(nav);
-//     }
-// });
-// close_icon.addEventListener('click', () => {
-//     nav.classList.toggle('shown');
-//     hamburger.classList.toggle('shown');
-//     close_icon.classList.toggle('shown');
-// });
-// close_icon.addEventListener('keydown', (e) => {
-//     if(e.code == 'Enter') {
-//         nav.classList.toggle('shown');
-//         hamburger.classList.toggle('shown');
-//         close_icon.classList.toggle('shown');
-//     }
-// });
 
 const faq = document.getElementById('faqs');
 const questions = faq.querySelectorAll('.faq-question');

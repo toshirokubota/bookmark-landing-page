@@ -71,6 +71,7 @@ nav.shown .company-logo {
     flex-direction: column;
     @media (min-width: 640px){
         flex-direction: row;
+        gap: 4rem;
     }
 }
 #feature-list li {
